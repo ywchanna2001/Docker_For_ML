@@ -25,6 +25,6 @@ for record in data:
     payload = {'features': record}
     payload = json.dumps(payload)
     response = requests.post(url, data=payload)
-    predictions.append(response.json()['predicted_class'])
+    predictions.append(response.json()['prediction_class'])
 
 print(predictions)
